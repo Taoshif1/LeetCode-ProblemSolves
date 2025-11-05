@@ -14,7 +14,7 @@ int* runningSum(int* nums, int numsSize, int* returnSize) {
         result[i] = sum;       // Store that running total in result[i]
     }
 
-    // Set the return size (LeetCode uses this to know the length of your output array)
+    // Set the return size 
     *returnSize = numsSize;
 
     // Return the dynamically allocated array
