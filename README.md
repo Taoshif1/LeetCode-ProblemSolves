@@ -24,8 +24,8 @@ My goal is not only to solve problems but to **document my journey & explain my 
 
 ## 🧩 Problems Solved So Far
 
-> 🔢 Total Problems Solved: **10 & counting**  
-> 🚀 This README currently documents **Problem #9 & #10**, solved today.
+> 🔢 Total Problems Solved: **11 & counting**  
+> 🚀 This README currently documents **Problem #11**, solved today.
 
 ---
 
@@ -114,7 +114,7 @@ Steps:
 2. If the current element is **not equal to `val`**, place it at the front
 3. Increase the count of valid elements
 
-This avoids unnecessary shifting and keeps the solution simple and efficient.
+This avoids unnecessary shifting & keeps the solution simple and efficient.
 
 ---
 
@@ -133,6 +133,86 @@ Output:
 k = 2
 nums = [2,2,,]
 ```
+---
+
+# ✅ Problem #11: Remove Duplicates from Sorted Array
+
+### 🔹 Problem Summary
+You are given a **sorted integer array** `nums`.  
+Your task is to **remove duplicate elements in-place** such that each unique element appears **only once**, while keeping the **relative order** the same.
+
+After removing duplicates:
+- Return `k` = number of unique elements
+- The **first `k` elements** of `nums` must contain the unique values in sorted order
+- Elements beyond index `k - 1` can be ignored
+
+---
+
+### 💡 Key Constraints & Observations
+- The array is **already sorted**
+- Duplicates always appear **next to each other**
+- No extra array is allowed (in-place modification)
+- Order **must be preserved**
+
+---
+
+### 🧠 My Approach (Two-Pointer Technique)
+
+Since the array is sorted, I take advantage of this property.
+
+I use:
+- One pointer to **track the position of the last unique element**
+- One pointer to **scan the array**
+
+Steps:
+1. Start from the second element
+2. Compare current element with the last unique element
+3. If different:
+   - Move it forward to the next unique position
+4. Increase the count of unique elements
+
+This ensures:
+- No extra memory usage
+- Stable order
+- Efficient traversal
+
+---
+
+### ⏱ Complexity
+- **Time:** `O(n)`
+- **Space:** `O(1)` (in-place)
+
+---
+
+### 🧪 Example 1
+```yaml
+Input:
+nums = [1,1,2]
+
+Output:
+k = 2
+nums = [1,2,_]
+```
+---
+### 🧪 Example 2
+```yaml
+Input:
+nums = [0,0,1,1,1,2,2,3,3,4]
+
+Output:
+k = 5
+nums = [0,1,2,3,4,,,,,_]
+```
+---
+
+### 🎯 Key Takeaway
+This problem demonstrates how recognizing **sorted data** allows us to:
+- Avoid unnecessary comparisons
+- Use efficient pointer-based solutions
+- Write clean, optimal in-place algorithms
+
+It reinforces strong fundamentals in **array traversal, pointer logic & algorithmic optimization**.
+
 ---
 
 ## 🎯 Why This Repository Matters
@@ -157,13 +237,10 @@ This repository demonstrates:
 ---
 
 ## 👋 About Me
-I am a **CSE undergraduate** actively strengthening my **problem-solving and algorithmic thinking**, aiming for **software engineering & backend roles**.
+I am a **CSE undergraduate** actively strengthening my **problem-solving & algorithmic thinking**, aiming for **software engineering & backend roles**.
 
 📌 I believe **clean thinking + clear explanation = good engineering**.
 
 # Thanks for checking out my work!
-
-
-
 
 
