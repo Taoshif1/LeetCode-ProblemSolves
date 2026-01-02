@@ -13,7 +13,6 @@ My goal is not only to solve problems but to **document my journey & explain my 
 - Clear **problem breakdown & approach explanation**
 - Code written with **readability & correctness**
 - Growth mindset - problems added gradually with explanations
-- MORE COMING SOON...
 
 ---
 
