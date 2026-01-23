@@ -202,8 +202,6 @@ Output:
 k = 5
 nums = [0,1,2,3,4,,,,,_]
 ```
----
-
 ### 🎯 Key Takeaway
 This problem demonstrates how recognizing **sorted data** allows us to:
 - Avoid unnecessary comparisons
@@ -211,6 +209,81 @@ This problem demonstrates how recognizing **sorted data** allows us to:
 - Write clean, optimal in-place algorithms
 
 It reinforces strong fundamentals in **array traversal, pointer logic & algorithmic optimization**.
+
+---
+# ✅ Problem #12: Check If N and Its Double Exist
+
+### 🔹 Problem Summary
+Given an integer array `arr`, return `true` if there exist two indices `i` and `j` such that `i != j` and `arr[i] == 2 * arr[j]`. Otherwise, return `false`.
+
+---
+
+### 💡 Key Constraints & Observations
+- The array can contain **positive, negative, and zero values**
+- Indices `i` and `j` must be **different**
+- Array size is small enough to allow `O(n²)` solutions
+- No sorting or extra memory is required
+
+---
+
+### 🧠 My Approach (Brute Force Comparison)
+
+To solve this problem, I compare **every element with every other element** using two loops.
+
+Steps:
+1. Traverse the array using index `i`
+2. For each `i`, traverse again using index `j`
+3. Check:
+   - `i != j`
+   - `arr[i] == 2 * arr[j]`
+4. If both conditions are true, return `true`
+5. If no such pair is found, return `false`
+
+This guarantees that all possible pairs are checked.
+
+---
+
+### ⏱ Complexity
+- **Time:** `O(n²)`
+- **Space:** `O(1)`
+
+---
+
+### 🧪 Example 1
+```yaml
+Input:
+arr = [10,2,5,3]
+
+Output:
+true
+```
+#### Explanation : 
+```pgsql
+10 == 2 * 5
+```
+
+### 🧪 Example 2
+```yaml
+Input:
+arr = [3,1,7,11]
+
+Output:
+false
+```
+#### Explanation:
+```pgsql
+No valid pair exists.
+```
+
+## 🎯 Key Takeaway
+
+This problem reinforces the importance of:
+- Carefully reading problem constraints
+- Comparing different indices correctly
+- Avoiding self-comparison
+- Writing clear logical conditions
+
+It demonstrates how brute-force techniques can be effective when input size is limited, while maintaining correctness and simplicity.
 
 ---
 
