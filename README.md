@@ -23,8 +23,8 @@ My goal is not only to solve problems but to **document my journey & explain my 
 
 ## 🧩 Problems Solved So Far
 
-> 🔢 Total Problems Solved: **11 & counting**  
-> 🚀 This README currently documents **Problem #11**, solved today.
+> 🔢 Total Problems Solved: **13 & counting**  
+> 🚀 This README currently documents all the solves including **Problem #13**, solved today.
 
 ---
 
@@ -284,6 +284,103 @@ This problem reinforces the importance of:
 - Writing clear logical conditions
 
 It demonstrates how brute-force techniques can be effective when input size is limited, while maintaining correctness and simplicity.
+
+---
+
+# ✅ Problem #13: Valid Mountain Array
+
+### 🔹 Problem Summary
+Given an integer array `arr` & the task is to check whether the array forms a **valid mountain shape**.
+
+An array is considered a mountain array if:
+
+- The length is at least `3`
+- It is **strictly increasing** at first
+- Reaches a **single peak**
+- Then becomes **strictly decreasing**
+- The peak cannot be the first or last element
+
+---
+
+### 💡 Key Constraints & Observations
+- The array must have **at least 3 elements**
+- No two adjacent elements can be equal
+- There must be exactly **one peak**
+- Purely increasing or purely decreasing arrays are invalid
+- Flat sections (`arr[i] == arr[i+1]`) are not allowed
+
+---
+
+### 🧠 My Approach (Single Pointer Traversal)
+
+To solve this problem, I traverse the array in two phases using a single pointer.
+
+#### Phase 1: Walk Up (Increasing Part)
+- Move forward while the next element is strictly greater
+
+#### Phase 2: Validate Peak
+- Ensure the peak is not at the start or end
+
+#### Phase 3: Walk Down (Decreasing Part)
+- Move forward while the next element is strictly smaller
+
+If the pointer reaches the end of the array after these steps, the array is a valid mountain.
+
+This approach ensures only **one pass** is required.
+
+---
+
+### ⏱ Complexity
+- **Time:** `O(n)`
+- **Space:** `O(1)`
+
+---
+
+### 🧪 Example 1
+```yaml
+Input:
+arr = [0,3,2,1]
+
+Output:
+true
+```
+#### Explantion
+```pgsql
+0 < 3 > 2 > 1  → Valid mountain shape
+```
+
+### 🧪 Example 2
+```yaml
+Input:
+arr = [3,5,5]
+
+Output:
+false
+```
+#### Explantion
+```ini
+5 == 5 → Not strictly increasing/decreasing
+```
+
+### 🧪 Example 3
+```yaml
+Input:
+arr = [2,1]
+
+Output:
+false
+```
+#### Explantion
+```js
+Array length < 3
+```
+---
+### 🎯 Key Takeaway
+This problem demonstrates how to:
+- Detect patterns in sequences
+- Handle edge cases correctly
+- Use pointer-based traversal efficiently
+- Validate multiple conditions in a single pass
 
 ---
 
